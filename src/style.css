@@ -111,66 +111,66 @@
 }
 
 .transition-0 {
-    -webkit-transition: 0.5s -webkit-all;
-    transition: 0.5s -webkit-all;
-    transition: 0.5s all;
-    transition: 0.5s all;
-}
-
-.transition-1 {
     -webkit-transition: 0.6s -webkit-all;
     transition: 0.6s -webkit-all;
     transition: 0.6s all;
     transition: 0.6s all;
 }
 
-.transition-2 {
+.transition-1 {
     -webkit-transition: 0.7s -webkit-all;
     transition: 0.7s -webkit-all;
     transition: 0.7s all;
     transition: 0.7s all;
 }
 
-.transition-3 {
+.transition-2 {
     -webkit-transition: 0.8s -webkit-all;
     transition: 0.8s -webkit-all;
     transition: 0.8s all;
     transition: 0.8s all;
 }
 
-.transition-4 {
+.transition-3 {
     -webkit-transition: 0.9s -webkit-all;
     transition: 0.9s -webkit-all;
     transition: 0.9s all;
     transition: 0.9s all;
 }
 
-.transition-5 {
+.transition-4 {
     -webkit-transition: 1s -webkit-all;
     transition: 1s -webkit-all;
     transition: 1s all;
     transition: 1s all;
 }
 
-.transition-6 {
+.transition-5 {
     -webkit-transition: 1.1s -webkit-all;
     transition: 1.1s -webkit-all;
     transition: 1.1s all;
     transition: 1.1s all;
 }
 
-.transition-7 {
+.transition-6 {
     -webkit-transition: 1.2s -webkit-all;
     transition: 1.2s -webkit-all;
     transition: 1.2s all;
     transition: 1.2s all;
 }
 
-.transition-8 {
+.transition-7 {
     -webkit-transition: 1.3s -webkit-all;
     transition: 1.3s -webkit-all;
     transition: 1.3s all;
     transition: 1.3s all;
+}
+
+.transition-8 {
+    -webkit-transition: 1.4s -webkit-all;
+    transition: 1.4s -webkit-all;
+    transition: 1.4s all;
+    transition: 1.4s all;
 }
 
 
