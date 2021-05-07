@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style/style.css">
+</head>
+<body>
+    <aside class="text-white py-0 px-[19px] w-[64px] h-full flex flex-col justify-items-start fixed top-0 left-0 z-20 bg-black items-center">
+        <div class="my-[25px] mx-auto">
+            <a>
+                <svg data-v-f210b31a="" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="26" height="21"><defs><path id="id-1069a" d="M8.742 0h7.805v21H.937V0h7.805z"></path></defs><g fill="none" fill-rule="evenodd"><g transform="translate(9)"><mask id="id-1070b" fill="#fff"><use xlink:href="#id-1069a"></use></mask><path fill="#FFF" d="M8.82 21c-.78 0-1.488-.483-1.995-1.361L.937 9.442 6.39 0l.93.537-5.143 8.905 5.578 9.66c.302.524.69.824 1.064.824.374 0 .762-.3 1.064-.824l5.734-9.928.93.536-5.734 9.929C10.307 20.517 9.6 21 8.82 21" mask="url(#id-1070b)"></path></g><path fill="#FFF" d="M15.333 21c-.78 0-1.488-.483-1.994-1.361L7.45 9.442 12.904 0l.929.537L8.69 9.442l5.579 9.66c.302.523.69.824 1.064.824V21zm2.483-2.204l5.246-9.085-.93-.537-4.937 8.549zm-1.242-2.151l4.004-6.934-.93-.537-3.694 6.398z"></path><path fill="#FFF" d="M15.331 14.494l2.762-4.783-.93-.537-2.452 4.246zm-1.242-2.152l1.52-2.632-.93-.536-1.21 2.095zM12.85 21c-.778 0-1.487-.483-1.993-1.361L4.969 9.442 10.42 0l.93.537-5.144 8.905 5.58 9.66c.301.523.69.824 1.063.824V21z"></path><path fill="#FFF" d="M10.366 21c-.78 0-1.488-.483-1.995-1.361L2.483 9.442 7.937 0l.93.537-5.144 8.905 5.58 9.66c.301.523.688.824 1.063.824V21z"></path><path fill="#FFF" d="M7.882 21c-.779 0-1.487-.483-1.994-1.361L0 9.442 5.453 0l.93.537L1.24 9.442l5.578 9.66c.302.523.69.824 1.064.824V21z"></path></g></svg>
+            </a>
+        </div>
+        <div class="my-[25px] mx-auto">
+            <a id="hamburger-btn" class="relative block cursor-pointer hamburger-btn" onclick="hamburger()">
+                <span id="bar1" class="hamburger-bar relative z-10 block h-[2px] bg-white my-[3px] mx-0 w-[16px]">
+
+                </span>
+                <span id="bar2" class="hamburger-bar hamburger-bar2 relative z-10 block h-[2px] bg-white my-[3px] mx-0 w-[16px]">
+
+                </span>
+                <span id="bar3" class="hamburger-bar relative z-10 block h-[2px] bg-white my-[3px] mx-0 w-[16px]">
+
+                </span>
+            </a>
+        </div>
+    </aside>
+    <aside id="menu" class="text-white fixed h-full overflow-x-hidden overflow-y-auto bg-black top-0 left-[-240px] z-10 w-[240px] py-[28px] px-[35px]">
+        <div class="menu-title mb-[9px]">
+            <h1 class="tracking-[0.7px] m-0 font-bold text-[18px] sans-serif">
+                Column Five
+            </h1>
+        </div>
+        <div class="">
+            <ul class="font-bold tracking-[1px] text-[14px] list-none p-0 sans-serif">
+                <li class="cursor-pointer menu-content my-[21px] mx-0">
+                    Brand
+                </li>
+                <li class="cursor-pointer menu-content my-[21px] mx-0">
+                    Personality
+                </li>
+                <li class="cursor-pointer menu-content my-[21px] mx-0">
+                    Design Philosophy
+                </li>
+            </ul>
+            <div class="menu-content menu-title my-[40px] mx-0">
+                <h2 class="m-0 tracking-[1px] uppercase font-bold sans-serif text-[12px]">
+                    Quick Links
+                </h2>
+            </div>
+            <ul class="font-bold tracking-[1px] text-[14px] list-none p-0 sans-serif">
+                <li class="cursor-pointer menu-content my-[21px] mx-0">
+                    Let's work together
+                </li>
+                <li class="cursor-pointer menu-content my-[21px] mx-0">
+                    Column Five Blog
+                </li>
+                <li class="cursor-pointer menu-content my-[21px] mx-0">
+                    Our Work
+                </li>
+            </ul>
+            <div class="menu-content menu-title my-[40px] mx-0">
+                <h2 class="m-0 tracking-[1px] uppercase font-bold sans-serif text-[12px]">
+                    Download Links
+                </h2>
+            </div>
+            <ul class="font-bold tracking-[1px] text-[14px] list-none p-0 sans-serif">
+                <li class="cursor-pointer menu-content my-[21px] mx-0">
+                    Column Five Logos
+                </li>
+            </ul>
+        </div>
+    </aside>
+    <section class="w-full h-screen mx-auto bg-black">
+        <div class="w-[913px] mx-auto helvetica" id="main">
+            <h1 class="py-[40px] text-white font-bold text-[48px] text-center mx-auto">
+                C5 Brand Guidelines
+            </h1>
+            <p class="text-[14px] text-white text-center mx-auto tracking-[0.7px]">
+                This guide is a work-in-progress reflection of the culture, voice, personality, and visual nuance of our brand and the people behind it.
+            </p>>
+            <div class="flex flex-row justify-between">
+                <div class="w-[288px] h-[179px] bg-[#FFCDCC] pl-[30px]">
+                    <h2 class="text-black font-bold text-[14px] py-[20px]">
+                        Brand
+                    </h2>
+                    <p class="w-[220px] text-black text-[14px] pb-[20px]">
+                        Story, logos, color, and type. All the junk that makes us, us.
+                    </p>
+                    <p class="w-[220px] text-black text-[14px] pb-[20px]">
+                        Go to Brand section ->
+                    </p>
+                </div>
+                <div class="w-[288px] h-[179px] bg-[#CCE8FF] pl-[30px]">
+                    <h2 class="text-black font-bold text-[14px] py-[20px]">
+                        Personality
+                    </h2>
+                    <p class="w-[220px] text-black text-[14px] pb-[20px]">
+                        The stuff that guides the way we talk, write, and interact with others
+                    </p>
+                    <p class="w-[220px] text-black text-[14px] pb-[20px]">
+                        Go to Personality section ->
+                    </p>
+                </div>
+                <div class="w-[288px] h-[179px] bg-[#E5E5E5] pl-[30px]">
+                    <h2 class="text-black font-bold text-[14px] py-[20px]">
+                        Design
+                    </h2>
+                    <p class="w-[220px] text-black text-[14px] pb-[20px]">
+                        The way we think and work when making stuff look good.
+                    </p>
+                    <p class="w-[220px] text-black text-[14px] pb-[20px]">
+                        Go to Design section ->
+                    </p>
+                </div>
+                
+            </div>
+        </div>
+    </section>
+    <h1 class="mt-[25px] text-red-600">hehehe</h1>
+
+    <script src="./js/app.js"></script>
+</body>
+</html>
