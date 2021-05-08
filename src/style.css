@@ -94,6 +94,15 @@
 }
 
 
+.sections {
+    padding-left: 0;
+    transition: padding .2s;
+}
+
+.hm {
+    padding-left: 240px; 
+}
+
 .helvetica {
     font-family: Helvetica;
 }

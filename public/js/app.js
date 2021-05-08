@@ -7,12 +7,15 @@ function hamburger() {
     if (document.getElementById("brand-menu").classList.contains("menu-closed")) {
         document.getElementById("brand-menu").classList.remove("menu-closed");
         document.getElementById("brand-menu").classList.add("menu-open");
-    } else if(document.getElementById("personality-menu").classList.contains("menu-closed")) {
+        moveLeftSection();
+    } else if (document.getElementById("personality-menu").classList.contains("menu-closed")) {
         document.getElementById("personality-menu").classList.remove("menu-closed");
         document.getElementById("personality-menu").classList.add("menu-open");
-    } else if(document.getElementById("design-menu").classList.contains("menu-closed")) {
+        moveLeftSection();
+    } else if (document.getElementById("design-menu").classList.contains("menu-closed")) {
         document.getElementById("design-menu").classList.remove("menu-closed");
         document.getElementById("design-menu").classList.add("menu-open");
+        moveLeftSection();
     } else {
         if (hamburgerMenu.classList.contains("hamburger-btn-close")) {
             closeMenu();
@@ -59,10 +62,11 @@ function main() {
 }
 
 function brand() {
+    document.getElementById("welcome").classList.remove("fadeIn");
     fadeOutSections();
-    document.getElementById("culture").classList.remove("fadeOut");
     closeHelperMenies();
     closeMenu();
+    moveLeftSection();
     removeActiveSection();
     removeActiveLink();
     document.getElementById("main").classList.remove('opacity-change');
@@ -70,9 +74,10 @@ function brand() {
 
     document.getElementById("brand-menu").classList.add("active-section");
     document.getElementById("culture-tab").classList.add("active-menu");
-    setTimeout(function() {
+    setTimeout(function () {
         hideActiveSection();
         document.getElementById("culture").classList.remove("hidden");
+        removeFadeOut();
         document.getElementById("culture").classList.add("block");
         document.getElementById("culture").classList.add("opened-section");
     }, 500)
@@ -81,23 +86,25 @@ function brand() {
 function closeBrand() {
     document.getElementById("brand-menu").classList.remove("menu-open");
     document.getElementById("brand-menu").classList.add("menu-closed");
+    moveBackLeftSection();
 }
 
 function personality() {
+    document.getElementById("welcome").classList.remove("fadeIn");
     fadeOutSections();
-    document.getElementById("voice").classList.remove("fadeOut");
-
     closeHelperMenies();
     closeMenu();
+    moveLeftSection();
     removeActiveSection();
     removeActiveLink();
     document.getElementById("main").classList.remove('opacity-change');
     document.getElementById("personality-menu").classList.add('menu-open');
     document.getElementById("personality-menu").classList.add("active-section");
     document.getElementById("voice-tab").classList.add("active-menu");
-    setTimeout(function() {
+    setTimeout(function () {
         hideActiveSection();
         document.getElementById("voice").classList.remove("hidden");
+        removeFadeOut();
         document.getElementById("voice").classList.add("block");
         document.getElementById("voice").classList.add("opened-section");
     }, 500)
@@ -106,13 +113,15 @@ function personality() {
 function closePersonality() {
     document.getElementById("personality-menu").classList.remove("menu-open");
     document.getElementById("personality-menu").classList.add("menu-closed");
+    moveBackLeftSection();
 }
 
 function design() {
+    document.getElementById("welcome").classList.remove("fadeIn");
     fadeOutSections();
-    document.getElementById("intentional").classList.remove("fadeOut");    
     closeHelperMenies();
     closeMenu();
+    moveLeftSection();
     removeActiveSection();
     removeActiveLink();
     document.getElementById("main").classList.remove('opacity-change');
@@ -121,9 +130,10 @@ function design() {
     document.getElementById("design-menu").classList.add("active-section");
     document.getElementById("intentional-tab").classList.add("active-menu");
 
-    setTimeout(function() {
+    setTimeout(function () {
         hideActiveSection();
         document.getElementById("intentional").classList.remove("hidden");
+        removeFadeOut();
         document.getElementById("intentional").classList.add("block");
         document.getElementById("intentional").classList.add("opened-section");
     }, 500)
@@ -132,37 +142,40 @@ function design() {
 function closeDesign() {
     document.getElementById("design-menu").classList.remove("menu-open");
     document.getElementById("design-menu").classList.add("menu-closed");
+    moveBackLeftSection();
 }
 
 
 function openHelperMenu(menu) {
     fadeOutSections();
-    document.getElementById(menu).classList.remove("fadeOut");   
     removeActiveLink();
     removeActiveSection();
+    moveLeftSection();
 
     document.getElementById("brand-menu").classList.add("active-section");
     document.getElementById(menu + "-tab").classList.add("active-menu");
 
-    setTimeout(function() {
+    setTimeout(function () {
         hideActiveSection();
         document.getElementById(menu).classList.remove("hidden");
+        removeFadeOut();
         document.getElementById(menu).classList.add("block");
         document.getElementById(menu).classList.add("opened-section");
     }, 500)
+
 }
 
 function openMainMenu() {
     fadeOutSections();
-    document.getElementById("welcome").classList.remove("fadeOut");   
     removeActiveLink();
     removeActiveSection();
 
     document.getElementById("brand-menu").classList.add("active-section");
 
-    setTimeout(function() {
+    setTimeout(function () {
         hideActiveSection();
         document.getElementById("welcome").classList.remove("hidden");
+        removeFadeOut();
         document.getElementById("welcome").classList.add("block");
         document.getElementById("welcome").classList.add("fadeIn");
         document.getElementById("welcome").classList.add("opened-section");
@@ -171,10 +184,11 @@ function openMainMenu() {
 
 function closeHelperMenies() {
     var helpMenu = document.getElementsByClassName("help-menu");
-    for (var i=0; i<helpMenu.length; i++) {
+    for (var i = 0; i < helpMenu.length; i++) {
         helpMenu[i].classList.remove("menu-open");
         helpMenu[i].classList.add("menu-close");
     }
+    moveBackLeftSection();
 }
 
 function removeActiveLink() {
@@ -193,7 +207,7 @@ function removeActiveSection() {
 
 function hideActiveSection() {
     for (var i = 0; i < sections.length; i++) {
-        if(sections[i].classList.contains("opened-section")) {
+        if (sections[i].classList.contains("opened-section")) {
             sections[i].classList.remove("opened-section");
             sections[i].classList.add("hidden");
         }
@@ -202,8 +216,28 @@ function hideActiveSection() {
 
 function fadeOutSections() {
     for (var i = 0; i < sections.length; i++) {
-        if(sections[i].classList.contains("opened-section")) {
+        if (sections[i].classList.contains("opened-section")) {
             sections[i].classList.add("fadeOut");
         }
+    }
+}
+
+function removeFadeOut() {
+    for (var i = 0; i < sections.length; i++) {
+        if (sections[i].classList.contains("fadeOut")) {
+            sections[i].classList.remove("fadeOut");
+        }
+    }
+}
+
+function moveLeftSection() {
+    for (var i = 0; i < sections.length; i++) {
+        sections[i].classList.add("hm");
+    }
+}
+
+function moveBackLeftSection() {
+    for (var i = 0; i < sections.length; i++) {
+        sections[i].classList.remove("hm");
     }
 }
