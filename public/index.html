@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,28 +8,59 @@
     <title>Document</title>
     <link rel="stylesheet" href="style/style.css">
 </head>
+
 <body>
-    <aside class="text-white py-0 px-[19px] w-[64px] h-full flex flex-col justify-items-start fixed top-0 left-0 z-20 bg-black items-center">
+    <aside
+        class="text-white py-0 px-[19px] w-[64px] h-full flex flex-col justify-items-start fixed top-0 left-0 z-30 bg-black items-center">
         <div class="my-[25px] mx-auto">
             <a>
-                <svg data-v-f210b31a="" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="26" height="21"><defs><path id="id-1069a" d="M8.742 0h7.805v21H.937V0h7.805z"></path></defs><g fill="none" fill-rule="evenodd"><g transform="translate(9)"><mask id="id-1070b" fill="#fff"><use xlink:href="#id-1069a"></use></mask><path fill="#FFF" d="M8.82 21c-.78 0-1.488-.483-1.995-1.361L.937 9.442 6.39 0l.93.537-5.143 8.905 5.578 9.66c.302.524.69.824 1.064.824.374 0 .762-.3 1.064-.824l5.734-9.928.93.536-5.734 9.929C10.307 20.517 9.6 21 8.82 21" mask="url(#id-1070b)"></path></g><path fill="#FFF" d="M15.333 21c-.78 0-1.488-.483-1.994-1.361L7.45 9.442 12.904 0l.929.537L8.69 9.442l5.579 9.66c.302.523.69.824 1.064.824V21zm2.483-2.204l5.246-9.085-.93-.537-4.937 8.549zm-1.242-2.151l4.004-6.934-.93-.537-3.694 6.398z"></path><path fill="#FFF" d="M15.331 14.494l2.762-4.783-.93-.537-2.452 4.246zm-1.242-2.152l1.52-2.632-.93-.536-1.21 2.095zM12.85 21c-.778 0-1.487-.483-1.993-1.361L4.969 9.442 10.42 0l.93.537-5.144 8.905 5.58 9.66c.301.523.69.824 1.063.824V21z"></path><path fill="#FFF" d="M10.366 21c-.78 0-1.488-.483-1.995-1.361L2.483 9.442 7.937 0l.93.537-5.144 8.905 5.58 9.66c.301.523.688.824 1.063.824V21z"></path><path fill="#FFF" d="M7.882 21c-.779 0-1.487-.483-1.994-1.361L0 9.442 5.453 0l.93.537L1.24 9.442l5.578 9.66c.302.523.69.824 1.064.824V21z"></path></g></svg>
+                <svg data-v-f210b31a="" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                    width="26" height="21">
+                    <defs>
+                        <path id="id-1069a" d="M8.742 0h7.805v21H.937V0h7.805z"></path>
+                    </defs>
+                    <g fill="none" fill-rule="evenodd">
+                        <g transform="translate(9)">
+                            <mask id="id-1070b" fill="#fff">
+                                <use xlink:href="#id-1069a"></use>
+                            </mask>
+                            <path fill="#FFF"
+                                d="M8.82 21c-.78 0-1.488-.483-1.995-1.361L.937 9.442 6.39 0l.93.537-5.143 8.905 5.578 9.66c.302.524.69.824 1.064.824.374 0 .762-.3 1.064-.824l5.734-9.928.93.536-5.734 9.929C10.307 20.517 9.6 21 8.82 21"
+                                mask="url(#id-1070b)"></path>
+                        </g>
+                        <path fill="#FFF"
+                            d="M15.333 21c-.78 0-1.488-.483-1.994-1.361L7.45 9.442 12.904 0l.929.537L8.69 9.442l5.579 9.66c.302.523.69.824 1.064.824V21zm2.483-2.204l5.246-9.085-.93-.537-4.937 8.549zm-1.242-2.151l4.004-6.934-.93-.537-3.694 6.398z">
+                        </path>
+                        <path fill="#FFF"
+                            d="M15.331 14.494l2.762-4.783-.93-.537-2.452 4.246zm-1.242-2.152l1.52-2.632-.93-.536-1.21 2.095zM12.85 21c-.778 0-1.487-.483-1.993-1.361L4.969 9.442 10.42 0l.93.537-5.144 8.905 5.58 9.66c.301.523.69.824 1.063.824V21z">
+                        </path>
+                        <path fill="#FFF"
+                            d="M10.366 21c-.78 0-1.488-.483-1.995-1.361L2.483 9.442 7.937 0l.93.537-5.144 8.905 5.58 9.66c.301.523.688.824 1.063.824V21z">
+                        </path>
+                        <path fill="#FFF"
+                            d="M7.882 21c-.779 0-1.487-.483-1.994-1.361L0 9.442 5.453 0l.93.537L1.24 9.442l5.578 9.66c.302.523.69.824 1.064.824V21z">
+                        </path>
+                    </g>
+                </svg>
             </a>
         </div>
         <div class="my-[25px] mx-auto">
             <a id="hamburger-btn" class="relative block cursor-pointer hamburger-btn" onclick="hamburger()">
-                <span id="bar1" class="hamburger-bar relative z-10 block h-[2px] bg-white my-[3px] mx-0 w-[16px]">
+                <span id="bar1" class="hamburger-bar relative z-20 block h-[2px] bg-white my-[3px] mx-0 w-[16px]">
 
                 </span>
-                <span id="bar2" class="hamburger-bar hamburger-bar2 relative z-10 block h-[2px] bg-white my-[3px] mx-0 w-[16px]">
+                <span id="bar2"
+                    class="hamburger-bar hamburger-bar2 relative z-20 block h-[2px] bg-white my-[3px] mx-0 w-[16px]">
 
                 </span>
-                <span id="bar3" class="hamburger-bar relative z-10 block h-[2px] bg-white my-[3px] mx-0 w-[16px]">
+                <span id="bar3" class="hamburger-bar relative z-20 block h-[2px] bg-white my-[3px] mx-0 w-[16px]">
 
                 </span>
             </a>
         </div>
     </aside>
-    <aside id="menu" class="text-white fixed h-full overflow-x-hidden overflow-y-auto bg-black top-0 left-[-240px] z-10 w-[240px] py-[28px] px-[35px]">
+    <aside id="menu"
+        class="text-white fixed h-full overflow-x-hidden overflow-y-auto bg-black top-0 left-[-240px] z-20 w-[240px] py-[28px] px-[35px]">
         <div class="menu-title mb-[9px]">
             <h1 class="tracking-[0.7px] m-0 font-bold text-[18px] sans-serif">
                 Column Five
@@ -36,7 +68,7 @@
         </div>
         <div class="">
             <ul class="font-bold tracking-[1px] text-[14px] list-none p-0 sans-serif">
-                <li class="cursor-pointer menu-content my-[21px] mx-0">
+                <li class="cursor-pointer menu-content my-[21px] mx-0" onclick="brand()">
                     Brand
                 </li>
                 <li class="cursor-pointer menu-content my-[21px] mx-0">
@@ -74,13 +106,46 @@
             </ul>
         </div>
     </aside>
-    <section class="w-full h-screen mx-auto bg-black">
-        <div class="w-[913px] mx-auto helvetica" id="main">
+    <aside id="brand-menu"
+        class="help-menu text-black fixed h-full overflow-x-hidden overflow-y-auto bg-[#F4F5F7] top-0 left-[-240px] z-10 w-[240px] py-[28px] pl-[25px] pr-[35px]">
+        <div class="cursor-pointer close-brand absolute left-auto text-[28px] top-[14px] right-[22px] sans-serif" onclick="closeBrand()">
+            <span>×</span>
+        </div>
+        <div class="pl-[10px] content-title tracking-[0.7px] text-black mt-[18px] mb-[30px] font-bold text-[16px] sans-serif">
+                Brand
+        </div>
+        <div class="">
+            <ul class="font-bold tracking-[1px] text-[14px] list-none p-0 sans-serif">
+                <li class="active-link cursor-pointer p-[10px]" onclick="brand()" id="culture-tab">
+                    Culture
+                </li>
+                <li class="active-link cursor-pointer p-[10px] " onclick="openHelperMenu('bestStory')" id="bestStory-tab">
+                    Best Story Wins
+                </li>
+                <li class="active-link cursor-pointer p-[10px] " onclick="openHelperMenu('ourName')" id="ourName-tab">
+                    Our Name
+                </li>
+                <li class="active-link cursor-pointer p-[10px] " onclick="openHelperMenu('logos')" id="logos-tab">
+                    Logos
+                </li>
+                <li class="active-link cursor-pointer p-[10px] " onclick="openHelperMenu('color')" id="color-tab">
+                    Color
+                </li>
+                <li class="active-link cursor-pointer p-[10px]" onclick="openHelperMenu('type')" id="type-tab">
+                    Type
+                </li>
+            </ul>
+        </div>
+    </aside>
+    
+    <section class="w-full h-screen mx-auto bg-black sections" id="welcome">
+        <div class="w-[910px] mx-auto helvetica content" id="main">
             <h1 class="py-[40px] text-white font-bold text-[48px] text-center mx-auto">
                 C5 Brand Guidelines
             </h1>
-            <p class="text-[14px] text-white text-center mx-auto tracking-[0.7px]">
-                This guide is a work-in-progress reflection of the culture, voice, personality, and visual nuance of our brand and the people behind it.
+            <p class="text-[14px] text-white text-center mx-auto tracking-[0.6px]">
+                This guide is a work-in-progress reflection of the culture, voice, personality, and visual nuance of our
+                brand and the people behind it.
             </p>>
             <div class="flex flex-row justify-between">
                 <div class="w-[288px] h-[179px] bg-[#FFCDCC] pl-[30px]">
@@ -116,10 +181,46 @@
                         Go to Design section ->
                     </p>
                 </div>
-                
             </div>
+        </div>
+    </section>
+    <section class="hidden w-full h-screen mx-auto bg-white sections" id="culture">
+        <div class="w-[910px] mx-auto helvetica pt-[56px] pb-0 px-[20px] content">
+            <h1 class="mb-[24px] font-bold text-black sans-serif text-[24px] text-left content-title">Culture</h1>
+            <p class="text-[14px] mt-[24px] tracking-[0.6px] leading-[24px]">At Column Five, we care about our culture. It’s something that we’ve worked on for years. The heart of this company is our people, and how we work with each other is what makes us special.</p>
+        </div>
+    </section>
+    <section class="hidden w-full h-screen mx-auto bg-white sections" id="bestStory">
+        <div class="w-[910px] mx-auto helvetica pt-[56px] pb-0 px-[20px] content">
+            <h1 class="mb-[24px] font-bold text-black sans-serif text-[24px] text-left content-title">Best Story Wins</h1>
+            <p class="text-[14px] mt-[24px] tracking-[0.6px] leading-[24px]">Everyone wants to be remembered. To make an impression. We want to connect with each other in lasting and impactful ways. For brands, these goals are equally as important but increasingly difficult to achieve.</p>
+        </div>
+    </section>
+    <section class="hidden w-full h-screen mx-auto bg-white sections" id="ourName">
+        <div class="w-[910px] mx-auto helvetica pt-[56px] pb-0 px-[20px] content">
+            <h1 class="mb-[24px] font-bold text-black sans-serif text-[24px] text-left content-title">Our Name</h1>
+            <p class="text-[14px] mt-[24px] tracking-[0.6px] leading-[24px]">What does "Column Five" mean? It's a nod to the "Fifth Column," and it sounded cool to our 28-year-old selves...</p>
+        </div>
+    </section>
+    <section class="hidden w-full h-screen mx-auto bg-white sections" id="logos">
+        <div class="w-[910px] mx-auto helvetica pt-[56px] pb-0 px-[20px] content">
+            <h1 class="mb-[24px] font-bold text-black sans-serif text-[24px] text-left content-title">Logos</h1>
+            <p class="text-[14px] mt-[24px] tracking-[0.6px] leading-[24px]">Column Five’s logo was created using an inverted triangle as the template. The inverted triangle represents a “V” for the roman numeral “5” and the word “visual.”</p>
+        </div>
+    </section>
+    <section class="hidden w-full h-screen mx-auto bg-white sections" id="color">
+        <div class="w-[910px] mx-auto helvetica pt-[56px] pb-0 px-[20px] content">
+            <h1 class="mb-[24px] font-bold text-black sans-serif text-[24px] text-left content-title">Color</h1>
+            <p class="text-[14px] mt-[24px] tracking-[0.6px] leading-[24px]">Column Five’s color primary color palette consists of black and white, with red accents as needed. Consistent color use strengthens our brand identitiy.</p>
+        </div>
+    </section>
+    <section class="hidden w-full h-screen mx-auto bg-white sections" id="type">
+        <div class="w-[910px] mx-auto helvetica pt-[56px] pb-0 px-[20px] content">
+            <h1 class="mb-[24px] font-bold text-black sans-serif text-[24px] text-left content-title">Type</h1>
+            <p class="text-[14px] mt-[24px] tracking-[0.6px] leading-[24px]">Column Five’s brand typeface is Hurme Geometric Sans. To add flexibility, the full Hurme family can be used in any materials.</p>
         </div>
     </section>
     <script src="./js/app.js"></script>
 </body>
+
 </html>

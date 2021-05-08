@@ -81,12 +81,34 @@
     transition: left .4s;
 }
 
+#brand-menu {
+    transition: left .2s;
+}
+
 .helvetica {
     font-family: Helvetica;
 }
 
 .sans-serif {
     font-family: sans-serif;
+}
+
+.active-menu {
+    background: #ebebeb;
+    border-radius: 4px;
+}
+
+.fadeOut {
+    animation: fadeOut .3s;
+}
+
+@keyframes fadeOut {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
 }
 
 .menu-title::after {
@@ -96,6 +118,15 @@
     height: 3px;
     margin: 10px 0;
     background-color: #fff;
+}
+
+.content-title::after {
+    content: "";
+    display: block;
+    width: 18px;
+    height: 3px;
+    margin: 10px 0;
+    background-color: black;
 }
 
 .menu-content {
