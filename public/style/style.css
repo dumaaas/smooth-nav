@@ -90,6 +90,15 @@
     transition: left .2s;
 }
 
+#personality-menu {
+    transition: left .2s;
+}
+
+#design-menu {
+    transition: left .2s;
+}
+
+
 .helvetica {
     font-family: Helvetica;
 }
@@ -104,8 +113,8 @@
 }
 
 .fadeOut {
-    -webkit-animation: fadeOut .3s;
-            animation: fadeOut .3s;
+    -webkit-animation: fadeOut .6s;
+            animation: fadeOut .6s;
 }
 
 @-webkit-keyframes fadeOut {
@@ -123,6 +132,29 @@
     }
     100% {
         opacity: 0;
+    }
+}
+
+.fadeIn {
+    -webkit-animation: fadeIn .4s;
+            animation: fadeIn .4s;
+}
+
+@-webkit-keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
     }
 }
 

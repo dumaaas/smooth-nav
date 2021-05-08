@@ -7,6 +7,12 @@ function hamburger() {
     if (document.getElementById("brand-menu").classList.contains("menu-closed")) {
         document.getElementById("brand-menu").classList.remove("menu-closed");
         document.getElementById("brand-menu").classList.add("menu-open");
+    } else if(document.getElementById("personality-menu").classList.contains("menu-closed")) {
+        document.getElementById("personality-menu").classList.remove("menu-closed");
+        document.getElementById("personality-menu").classList.add("menu-open");
+    } else if(document.getElementById("design-menu").classList.contains("menu-closed")) {
+        document.getElementById("design-menu").classList.remove("menu-closed");
+        document.getElementById("design-menu").classList.add("menu-open");
     } else {
         if (hamburgerMenu.classList.contains("hamburger-btn-close")) {
             closeMenu();
@@ -46,17 +52,30 @@ function closeMenu() {
     }
 }
 
+function main() {
+    closeHelperMenies();
+    closeMenu();
+    openMainMenu();
+}
+
 function brand() {
-    hideAllSections();
+    fadeOutSections();
+    document.getElementById("culture").classList.remove("fadeOut");
+    closeHelperMenies();
     closeMenu();
     removeActiveSection();
     removeActiveLink();
     document.getElementById("main").classList.remove('opacity-change');
     document.getElementById("brand-menu").classList.add('menu-open');
-    document.getElementById("culture").classList.remove("hidden");
-    document.getElementById("culture").classList.add("block");
+
     document.getElementById("brand-menu").classList.add("active-section");
     document.getElementById("culture-tab").classList.add("active-menu");
+    setTimeout(function() {
+        hideActiveSection();
+        document.getElementById("culture").classList.remove("hidden");
+        document.getElementById("culture").classList.add("block");
+        document.getElementById("culture").classList.add("opened-section");
+    }, 500)
 }
 
 function closeBrand() {
@@ -64,14 +83,98 @@ function closeBrand() {
     document.getElementById("brand-menu").classList.add("menu-closed");
 }
 
+function personality() {
+    fadeOutSections();
+    document.getElementById("voice").classList.remove("fadeOut");
+
+    closeHelperMenies();
+    closeMenu();
+    removeActiveSection();
+    removeActiveLink();
+    document.getElementById("main").classList.remove('opacity-change');
+    document.getElementById("personality-menu").classList.add('menu-open');
+    document.getElementById("personality-menu").classList.add("active-section");
+    document.getElementById("voice-tab").classList.add("active-menu");
+    setTimeout(function() {
+        hideActiveSection();
+        document.getElementById("voice").classList.remove("hidden");
+        document.getElementById("voice").classList.add("block");
+        document.getElementById("voice").classList.add("opened-section");
+    }, 500)
+}
+
+function closePersonality() {
+    document.getElementById("personality-menu").classList.remove("menu-open");
+    document.getElementById("personality-menu").classList.add("menu-closed");
+}
+
+function design() {
+    fadeOutSections();
+    document.getElementById("intentional").classList.remove("fadeOut");    
+    closeHelperMenies();
+    closeMenu();
+    removeActiveSection();
+    removeActiveLink();
+    document.getElementById("main").classList.remove('opacity-change');
+    document.getElementById("design-menu").classList.add('menu-open');
+
+    document.getElementById("design-menu").classList.add("active-section");
+    document.getElementById("intentional-tab").classList.add("active-menu");
+
+    setTimeout(function() {
+        hideActiveSection();
+        document.getElementById("intentional").classList.remove("hidden");
+        document.getElementById("intentional").classList.add("block");
+        document.getElementById("intentional").classList.add("opened-section");
+    }, 500)
+}
+
+function closeDesign() {
+    document.getElementById("design-menu").classList.remove("menu-open");
+    document.getElementById("design-menu").classList.add("menu-closed");
+}
+
+
 function openHelperMenu(menu) {
-    hideAllSections();
+    fadeOutSections();
+    document.getElementById(menu).classList.remove("fadeOut");   
     removeActiveLink();
     removeActiveSection();
-    document.getElementById(menu).classList.remove("hidden");
-    document.getElementById(menu).classList.add("block");
+
     document.getElementById("brand-menu").classList.add("active-section");
     document.getElementById(menu + "-tab").classList.add("active-menu");
+
+    setTimeout(function() {
+        hideActiveSection();
+        document.getElementById(menu).classList.remove("hidden");
+        document.getElementById(menu).classList.add("block");
+        document.getElementById(menu).classList.add("opened-section");
+    }, 500)
+}
+
+function openMainMenu() {
+    fadeOutSections();
+    document.getElementById("welcome").classList.remove("fadeOut");   
+    removeActiveLink();
+    removeActiveSection();
+
+    document.getElementById("brand-menu").classList.add("active-section");
+
+    setTimeout(function() {
+        hideActiveSection();
+        document.getElementById("welcome").classList.remove("hidden");
+        document.getElementById("welcome").classList.add("block");
+        document.getElementById("welcome").classList.add("fadeIn");
+        document.getElementById("welcome").classList.add("opened-section");
+    }, 500)
+}
+
+function closeHelperMenies() {
+    var helpMenu = document.getElementsByClassName("help-menu");
+    for (var i=0; i<helpMenu.length; i++) {
+        helpMenu[i].classList.remove("menu-open");
+        helpMenu[i].classList.add("menu-close");
+    }
 }
 
 function removeActiveLink() {
@@ -88,14 +191,19 @@ function removeActiveSection() {
     }
 }
 
-function hideAllSections() {
+function hideActiveSection() {
     for (var i = 0; i < sections.length; i++) {
-        sections[i].classList.add("hidden");
+        if(sections[i].classList.contains("opened-section")) {
+            sections[i].classList.remove("opened-section");
+            sections[i].classList.add("hidden");
+        }
     }
 }
 
 function fadeOutSections() {
     for (var i = 0; i < sections.length; i++) {
-        sections[i].classList.add("fadeOut");
+        if(sections[i].classList.contains("opened-section")) {
+            sections[i].classList.add("fadeOut");
+        }
     }
 }

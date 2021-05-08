@@ -5,15 +5,16 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Smooth Nav</title>
     <link rel="stylesheet" href="style/style.css">
 </head>
 
 <body>
+    <!-- HAMBURGER ASIDE -->
     <aside
         class="text-white py-0 px-[19px] w-[64px] h-full flex flex-col justify-items-start fixed top-0 left-0 z-30 bg-black items-center">
         <div class="my-[25px] mx-auto">
-            <a>
+            <a onclick="main()" class="cursor-pointer">
                 <svg data-v-f210b31a="" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
                     width="26" height="21">
                     <defs>
@@ -59,6 +60,7 @@
             </a>
         </div>
     </aside>
+    <!-- MAIN ASIDE -->
     <aside id="menu"
         class="text-white fixed h-full overflow-x-hidden overflow-y-auto bg-black top-0 left-[-240px] z-20 w-[240px] py-[28px] px-[35px]">
         <div class="menu-title mb-[9px]">
@@ -71,10 +73,10 @@
                 <li class="cursor-pointer menu-content my-[21px] mx-0" onclick="brand()">
                     Brand
                 </li>
-                <li class="cursor-pointer menu-content my-[21px] mx-0">
+                <li class="cursor-pointer menu-content my-[21px] mx-0" onclick="personality()">
                     Personality
                 </li>
-                <li class="cursor-pointer menu-content my-[21px] mx-0">
+                <li class="cursor-pointer menu-content my-[21px] mx-0" onclick="design()">
                     Design Philosophy
                 </li>
             </ul>
@@ -106,6 +108,7 @@
             </ul>
         </div>
     </aside>
+    <!-- BRAND ASIDE AND SECTIONS -->
     <aside id="brand-menu"
         class="help-menu text-black fixed h-full overflow-x-hidden overflow-y-auto bg-[#F4F5F7] top-0 left-[-240px] z-10 w-[240px] py-[28px] pl-[25px] pr-[35px]">
         <div class="cursor-pointer close-brand absolute left-auto text-[28px] top-[14px] right-[22px] sans-serif" onclick="closeBrand()">
@@ -137,8 +140,7 @@
             </ul>
         </div>
     </aside>
-    
-    <section class="w-full h-screen mx-auto bg-black sections" id="welcome">
+    <section class="w-full h-screen mx-auto bg-black sections opened-section" id="welcome">
         <div class="w-[910px] mx-auto helvetica content" id="main">
             <h1 class="py-[40px] text-white font-bold text-[48px] text-center mx-auto">
                 C5 Brand Guidelines
@@ -220,6 +222,119 @@
             <p class="text-[14px] mt-[24px] tracking-[0.6px] leading-[24px]">Column Five’s brand typeface is Hurme Geometric Sans. To add flexibility, the full Hurme family can be used in any materials.</p>
         </div>
     </section>
+    <!-- PERSONALITY ASIDE AND SECTIONS -->
+    <aside id="personality-menu"
+        class="help-menu text-black fixed h-full overflow-x-hidden overflow-y-auto bg-[#F4F5F7] top-0 left-[-240px] z-10 w-[240px] py-[28px] pl-[25px] pr-[35px]">
+        <div class="cursor-pointer close-personality absolute left-auto text-[28px] top-[14px] right-[22px] sans-serif" onclick="closePersonality()">
+            <span>×</span>
+        </div>
+        <div class="pl-[10px] content-title tracking-[0.7px] text-black mt-[18px] mb-[30px] font-bold text-[16px] sans-serif">
+                Personality
+        </div>
+        <div class="">
+            <ul class="font-bold tracking-[1px] text-[14px] list-none p-0 sans-serif">
+                <li class="active-link cursor-pointer p-[10px]" onclick="personality()" id="voice-tab">
+                    Voice
+                </li>
+                <li class="active-link cursor-pointer p-[10px] " onclick="openHelperMenu('tone')" id="tone-tab">
+                    Tone
+                </li>
+                <li class="active-link cursor-pointer p-[10px] " onclick="openHelperMenu('forHumans')" id="forHumans-tab">
+                    Write for Humans
+                </li>
+                <li class="active-link cursor-pointer p-[10px] " onclick="openHelperMenu('messaging')" id="messaging-tab">
+                    Corporate Messaging
+                </li>
+                <li class="active-link cursor-pointer p-[10px] " onclick="openHelperMenu('useCases')" id="useCases-tab">
+                    Writing Use Cases
+                </li>
+                <li class="active-link cursor-pointer p-[10px]" onclick="openHelperMenu('toAvoid')" id="toAvoid-tab">
+                    Things to Avoid
+                </li>
+            </ul>
+        </div>
+    </aside>
+    
+    <section class="hidden w-full h-screen mx-auto bg-white sections" id="voice">
+        <div class="w-[910px] mx-auto helvetica pt-[56px] pb-0 px-[20px] content">
+            <h1 class="mb-[24px] font-bold text-black sans-serif text-[24px] text-left content-title">Voice</h1>
+            <p class="text-[14px] mt-[24px] tracking-[0.6px] leading-[24px]">Column Five’s voice is human. It’s self-aware, good-natured, and frank.</p>
+        </div>
+    </section>
+    <section class="hidden w-full h-screen mx-auto bg-white sections" id="tone">
+        <div class="w-[910px] mx-auto helvetica pt-[56px] pb-0 px-[20px] content">
+            <h1 class="mb-[24px] font-bold text-black sans-serif text-[24px] text-left content-title">Tone</h1>
+            <p class="text-[14px] mt-[24px] tracking-[0.6px] leading-[24px]">Column Five’s tone is informal.</p>
+        </div>
+    </section>
+    <section class="hidden w-full h-screen mx-auto bg-white sections" id="forHumans">
+        <div class="w-[910px] mx-auto helvetica pt-[56px] pb-0 px-[20px] content">
+            <h1 class="mb-[24px] font-bold text-black sans-serif text-[24px] text-left content-title">Write for Humans
+            </h1>
+            <p class="text-[14px] mt-[24px] tracking-[0.6px] leading-[24px]">What does that mean? It means we’re not writing generic marketing speak for search engines (Hi, Google:)). It means we do everything within our power to write engaging content that people can connect with, which provides them with something of value. We’re encouraging, helpful, and willing to make (or take) a joke or two.</p>
+        </div>
+    </section>
+    <section class="hidden w-full h-screen mx-auto bg-white sections" id="messaging">
+        <div class="w-[910px] mx-auto helvetica pt-[56px] pb-0 px-[20px] content">
+            <h1 class="mb-[24px] font-bold text-black sans-serif text-[24px] text-left content-title">Corporate Messaging</h1>
+            <p class="text-[14px] mt-[24px] tracking-[0.6px] leading-[24px]">The way we talk about ourselves should be consistent but not robotic.</p>
+        </div>
+    </section>
+    <section class="hidden w-full h-screen mx-auto bg-white sections" id="useCases">
+        <div class="w-[910px] mx-auto helvetica pt-[56px] pb-0 px-[20px] content">
+            <h1 class="mb-[24px] font-bold text-black sans-serif text-[24px] text-left content-title">Writing Use Cases</h1>
+            <p class="text-[14px] mt-[24px] tracking-[0.6px] leading-[24px]">Column Five’s color primary color palette consists of black and white, with red accents as needed. Consistent color use strengthens our brand identitiy.</p>
+        </div>
+    </section>
+    <section class="hidden w-full h-screen mx-auto bg-white sections" id="toAvoid">
+        <div class="w-[910px] mx-auto helvetica pt-[56px] pb-0 px-[20px] content">
+            <h1 class="mb-[24px] font-bold text-black sans-serif text-[24px] text-left content-title">Things to Avoid</h1>
+            <p class="text-[14px] mt-[24px] tracking-[0.6px] leading-[24px]">Although we sometimes lend our services to select political and/or religious organizations that we believe do good work, we tend to avoid discussing politics and religion in our content. In other words, we’ve adopted bar conversation etiquette.</p>
+        </div>
+    </section>
+    <!-- DESIGN ASIDE AND SECTIONS -->
+    <aside id="design-menu"
+        class="help-menu text-black fixed h-full overflow-x-hidden overflow-y-auto bg-[#F4F5F7] top-0 left-[-240px] z-10 w-[240px] py-[28px] pl-[25px] pr-[35px]">
+        <div class="cursor-pointer close-design absolute left-auto text-[28px] top-[14px] right-[22px] sans-serif" onclick="closeDesign()">
+            <span>×</span>
+        </div>
+        <div class="pl-[10px] content-title tracking-[0.7px] text-black mt-[18px] mb-[30px] font-bold text-[16px] sans-serif">
+                Design
+        </div>
+        <div class="">
+            <ul class="font-bold tracking-[1px] text-[14px] list-none p-0 sans-serif">
+                <li class="active-link cursor-pointer p-[10px]" onclick="design()" id="intentional-tab">
+                    Be Intentional
+                </li>
+                <li class="active-link cursor-pointer p-[10px] " onclick="openHelperMenu('improve')" id="improve-tab">
+                    Improve, not distract
+                </li>
+                <li class="active-link cursor-pointer p-[10px] " onclick="openHelperMenu('analog')" id="analog-tab">
+                    Analog is Awesome
+                </li>
+            </ul>
+        </div>
+    </aside>
+    <section class="hidden w-full h-screen mx-auto bg-white sections" id="intentional">
+        <div class="w-[910px] mx-auto helvetica pt-[56px] pb-0 px-[20px] content">
+            <h1 class="mb-[24px] font-bold text-black sans-serif text-[24px] text-left content-title">Be Intentional</h1>
+            <p class="text-[14px] mt-[24px] tracking-[0.6px] leading-[24px]">Why did you choose to make the background blue instead of green? How does a circular diagram best represent the process we're trying to visualize? Why did you include 1 CTA instead of 2?</p>
+        </div>
+    </section>
+    <section class="hidden w-full h-screen mx-auto bg-white sections" id="improve">
+        <div class="w-[910px] mx-auto helvetica pt-[56px] pb-0 px-[20px] content">
+            <h1 class="mb-[24px] font-bold text-black sans-serif text-[24px] text-left content-title">Improve, not distract</h1>
+            <p class="text-[14px] mt-[24px] tracking-[0.6px] leading-[24px]">Yes, less is more—but not less clarity, less comprehension, and less accessibility.</p>
+        </div>
+    </section>
+    <section class="hidden w-full h-screen mx-auto bg-white sections" id="analog">
+        <div class="w-[910px] mx-auto helvetica pt-[56px] pb-0 px-[20px] content">
+            <h1 class="mb-[24px] font-bold text-black sans-serif text-[24px] text-left content-title">Analog is Awesome</h1>
+            <p class="text-[14px] mt-[24px] tracking-[0.6px] leading-[24px]">Take a step back from the computer and get your drawing pad out for some sketches.</p>
+        </div>
+    </section>
+
+    <!-- SCRIPTS -->
     <script src="./js/app.js"></script>
 </body>
 
